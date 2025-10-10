@@ -1,0 +1,75 @@
+Installation
+Architecture 
+Datatypes 
+Conditional and iterative statements  
+Methods and variable - Static vs Non-static 
+Static vs Non static concepts 
+Class & Object 
+
+
+
+Oops - 
+Encapsulation
+Inheritance
+Polymorphism - static (method overloading) vs dynamic polymorphism (method overriding)
+Abstraction 
+	abstract class 
+	interface 
+
+
+-------------------------------------
+
+
+Class
+	Static variable 
+	Non-static variable 
+
+	static methods
+	non-static methods
+
+	static properties
+	non-static properties 
+
+	Constructor 
+
+----------------------------
+To call the static method 
+			Classname.MethodName()
+
+
+
+To call the non-static method 
+	Create an object for that class 
+	Use objref.MethodName()
+
+
+-----------------------------------------
+
+
+Student 
+	studentId
+	studentName
+	studentPercentage
+	schoolName
+	schoolAddress 
+
+
+
+(101, Saul, 90, Global, Chennai)
+(102, Kim, 68, Global, Chennai)
+(103, Peter, 50, Global, Chennai)
+
+
+
+PrintCertification()
+
+If percentage>=80 --> print Congrats! Grade A
+If percentage between 60 (inclusive) to 79 (inclusive) -->print Congrats! Grade B
+<60 --> then print please reattempt!!!
+
+
+ele-->{
+<input class="js-text-full text-full form-text required error" placeholder="Company Name in India*" data-drupal-selector="edit-title-0-value" type="text" id="edit-title-0-value" name="title[0][value]" value="" size="60" maxlength="255" required="required" aria-required="true" aria-invalid="true">
+	
+}
+

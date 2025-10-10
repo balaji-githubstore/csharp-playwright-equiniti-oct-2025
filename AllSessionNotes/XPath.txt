@@ -1,0 +1,72 @@
+XPath 
+
+Absolute XPath (not recommended) - /html/body/section[2]/div/div/div/div[2]/div/form/div[2]/div[3]/div/div/input
+
+
+Relative XPath 
+
+//tagname[@attribute='']
+//tagname[text()='']
+
+
+Contains - text() contains may not work on white space
+//tagname[contains(@attribute,'')]
+//tagname[contains(text(),'')]
+
+
+normalize-space() - ignore whitespace the check element
+//tagname[normalize-space()='']
+//tagname[contains(normalize-space(),'')]
+
+
+Group the xpath - start at 1 
+(//div[@class='checkbox-ui'])[2]
+
+
+Example: Verify in chrome - ctrl+f 
+//input[@placeholder='Company Name in India*']
+
+
+//label[text()=' Engagement with Peers and Leaders through networking events and meetings']
+
+
+//label[contains(normalize-space(),'Engagement with Peers and Leaders')]
+//label[@for='edit-field-nasscom-engagmnt-three-127150000']
+
+
+//a[@data-page-cntrl='next']
+//span[text()='Next']
+
+//input[contains(@id,'UserFirstName')]
+
+//frame[@name='login_page']
+//frame[contains(@src,'RSNBLogin')]
+
+
+----------------------------------------------------------
+
+CSS - https://www.w3schools.com/cssref/css_selectors.php
+#id
+.classname
+tagname[attribute='']
+[attribute='']
+
+Example: 
+#email
+#pass
+button[name='login']
+
+
+
+
+
+
+
+----------------------------------------------------------------------------
+Links
+https://eq-sol-ops-us-fd-main.azurefd.net/informational/contact-us/
+
+
+
+
+
