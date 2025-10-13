@@ -15,6 +15,8 @@ namespace StudentManagement
         public static string schoolName;
         public static string schoolAddress;
 
+        //Encapsulation
+        
         public int StudentId
         {
             get

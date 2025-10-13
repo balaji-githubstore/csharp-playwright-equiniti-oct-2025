@@ -28,6 +28,7 @@ namespace EQ.PlaywrightAutomation
             //opens a new tab
             await page.Locator("xpath=//b[contains(normalize-space(),'phpMyAdmin')]").ClickAsync();
 
+
             //pageSecondTab --> points to tab 2
             //this will capture the new tab (page) opened by the previous click
             var pageSecondTab = await newTab;
@@ -93,4 +94,3 @@ namespace EQ.PlaywrightAutomation
     }
 }
 
-//will resume at 17:45 (in 15 mins)

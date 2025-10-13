@@ -1,24 +1,28 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumProject
 {
     public class Tests
     {
 
-        //[Test]
+        [Test]
         public void Test1()
         {
-            IWebDriver driver = new ChromeDriver();
+            IWebDriver driver = new EdgeDriver();
 
-            //network idle state
+            ////network idle state
             driver.Url = "https://www.nasscom.in/nasscom-membership";
 
 
-            Console.WriteLine(driver.Title);
+            //Console.WriteLine(driver.Title);
 
             //wait conditions 
             //click ---> presence, visible, clickable 
+
+          //  SelectElement select = new SelectElement();
 
         }
     }
