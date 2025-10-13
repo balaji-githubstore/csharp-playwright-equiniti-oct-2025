@@ -91,6 +91,40 @@ namespace EQ.PlaywrightAutomation
             await Task.Delay(5000);
 
         }
+
+
+
+        [Test]
+        public async Task ShareowneronlineRunWithTabTest()
+        {
+
+            var playwright = await Playwright.CreateAsync();
+            var browser = await playwright.Chromium.LaunchAsync(new() { Headless = false, Channel = "chrome" });
+            var context = await browser.NewContextAsync();
+
+            var page = await context.NewPageAsync();
+
+            await page.GotoAsync("https://eq-sol-ops-us-fd-main.azurefd.net/informational/contact-us/", new() { WaitUntil = WaitUntilState.Load, Timeout = 0 });
+
+            //var newTab = page.WaitForPopupAsync();
+
+            //await page.Locator("xpath=//a[text()='Privacy Policy']").ClickAsync();
+
+            //var page2 = await newTab;
+
+            //await page2.Locator("xpath=//a[@id='loginButton']").ClickAsync();
+
+            var page2=await page.RunAndWaitForPopupAsync(async () =>
+            {
+                await page.Locator("xpath=//a[text()='Privacy Policy']").ClickAsync();
+            });
+
+
+            await page2.Locator("xpath=//a[@id='loginButton']").ClickAsync();
+
+            await Task.Delay(5000);
+
+        }
     }
 }
 
