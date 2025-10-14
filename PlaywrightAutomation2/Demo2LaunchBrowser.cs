@@ -15,7 +15,7 @@ namespace EQ.PlaywrightAutomation
             var playwright = await Playwright.CreateAsync();
 
             var browser = await playwright.Chromium.LaunchAsync(new() { Headless=false ,Channel="chrome"});
-           // var browser1 = await playwright.Chromium.LaunchAsync(new() { Headless = false, Channel = "msedge" });
+           //var browser1 = await playwright.Chromium.LaunchAsync(new() { Headless = false, Channel = "msedge" });
 
             var context = await browser.NewContextAsync();
             var page = await context.NewPageAsync();
