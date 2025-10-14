@@ -1,0 +1,505 @@
+﻿Stage 1 - C# 
+Stage 2 - Playwright (Web automation) 
+Stage 3 - Framework 1 (Hybrid Framework - (NUnit, Data Driven Framework, Page Object Model, Keyword Driven Framework) 
+Stage 4 - BDD Framework (ReqNRoll)
+Stage 5 - CI (Git & Jenkins) 
+
+
+
+
+Session Notes/C#/Playwright - https://github.com/balaji-githubstore/csharp-playwright-equiniti-oct-2025.git
+
+
+BDD Framework - https://github.com/balaji-githubstore/csharp-bdd-framework-equiniti-oct-2025.git
+
+
+
+
+
+
+MCQ 
+1. Pre-Test 
+2. Mid Test 
+3. Final Test 
+Caption Project 
+1. Final Project using BDD Framework 
+
+
+
+
+C# - Programming 
+1. Installation 
+   1. Visual studio IDE 
+      1. .Net desktop development 
+2. Architecture 
+
+
+Console app Project: 
+                Source code (.csproj) →[a] .dll/.exe →[b] O/P
+
+
+        Unit Test Project/Class library 
+Source code (.csproj) →[c] .dll →[d] O/P
+
+
+
+
+.dll → platform independent 
+Compiler → Converts source code to .dll 
+CLR - Common Language Runtime → helps the OS to understand the .dll 
+
+
+3. Naming convention 
+UpperCamelCase - MyFirstProject
+lowerCamelCase - myFirstProject 
+
+
+4. Structure of C# Project 
+
+
+Solution - UpperCamelCase 
+        Project 1- UpperCamelCase 
+                Namespace - UpperCamelCase 
+                        Class - UpperCamelCase 
+                                Methods - UpperCamelCase 
+                                Variable - lowerCamelCase 
+
+
+        Project 2 - console 
+        Project 3 - class library/unit test 
+
+
+5. Create console (Source code (.csproj) →[e] .dll/.exe →[f] O/P)
+6. Datatypes 
+   1. Pre-defined datatypes 
+   2. Non-pre-defined datatypes - collections of pre-defined datatypes 
+      1. String 
+      2. Array 
+         1. Size is fixed 
+      3. User-defined datatypes 
+7. When dealing with whole numbers, C# takes it as int 
+When dealing with decimal number. C# takes it as a double         
+
+
+8. Debugging 
+   1. Continue 
+   2. Terminate 
+   3. Step over 
+   4. Step into 
+
+
+9. Methods - Building block of the program 
+   1. Static methods 
+How to create and call it? 
+                //accessmodifier static returntype methodname(arguments)
+
+
+                To call the static method 
+                        Classname.MethodName()
+
+
+   2. Non-static methods 
+How to create and call it? 
+
+
+To call the non-static method 
+1. Create an object for that class 
+2. Use objref.MethodName()
+
+
+10. Variable 
+   1. Static variable 
+   2. Non-static variable 
+
+
+11. Object 
+   1. Declaration 
+   2. Instantiation 
+   3. Initialization 
+
+
+12. Class & Object 
+   1. Class - A class is a template, blueprint, or type from which objects are created
+   2. Object 
+      1. An object is an instance of class 
+      2. Every object has its own state (non-static variable) and behaviour (non-static methods)
+13. Accessmodifier 
+   1. Private - accessible within the class 
+   2. Internal - accessible within the assembly
+   3. Protected - accessible in the child class (inheritance) 
+   4. Protected internal - accessible within the assembly and also outside the assembly through inheritance 
+   5. Public - accessible anywhere 
+14. Encapsulation in C# → Properties → get, set 
+
+
+15. this keyword 
+   1. this keyword - helps to distinguish between instance and local variable 
+   2. this→ will point to the current object 
+16. Var and dynamic 
+   1. var → assigns the datatype during compile time 
+17. Constructor - Pre-requisite for the object
+   1. Constructor name and classname should be same. 
+   2. It is kind of method that gets called during the object creation. 
+   3. There will be always a default constructor. It helps to load all the non-static variables with default values in the current object 
+   4. We can override the default constructor by creating our own constructor 
+      1. Without arguments 
+      2. With arguments 
+   5. When there is a constructor explicitly created, then on object creation we need to call it. 
+
+
+18. Constructor Overloading 
+19. Method Overloading 
+
+
+
+
+
+
+
+
+
+
+C# - Unit test framework - MSTest, XUnit, Nunit 
+
+
+Architecture of a playwright C#
+
+
+C# Project → .Net libraries → node js server → browser 
+
+
+Playwright 
+1. Create a NUnit test project 
+2. Open Nuget package manager and add/update all libraries 
+   1. Microsoft. playwright. unit 
+3. Click, type, Select 
+4. To inspect → tagname, attribute, text or not 
+5. Basic form click & type 
+6. Autowait for ClickAsyn, FillAsyc 
+https://playwright.dev/dotnet/docs/actionability
+7. ClickAsync, FillAsync, SelectOptionAsync, InnerTextAsync 
+8. Dropdown 
+   1. Select 
+      1. Index
+      2. Value 
+      3. Label 
+   2. Without select 
+      1. Click 
+9. Multiple tabs/windows, Frame, Alert 
+10. [Test] method should have minimum one assertion 
+https://docs.nunit.org/articles/nunit/writing-tests/assertions/assertion-models/special.html
+
+
+11. Frame - embed one HTML into HTML 
+   1. Even though the locator is correct, we get no locator found error 
+   2. Check for iframe or frame 
+
+
+12. To inspect → f12 or ctrl+shift+c 
+13. Alert 
+   1. JavaScript alert - Playwright handles it automatically 
+
+
+14. Upload 
+   1. Direct method  - for upload check for xpath - //input[@type='file']
+   2. Event handler 
+   3. RunAndWait methods 
+
+
+15. Dynamic Table 
+16. Shadownroot elements (use only CSS selector) 
+17. Javascript 
+
+
+
+
+
+
+—---------------------------------------------------------------------------------------------------------
+
+
+GIT - Git is a free and open source distributed version control system
+
+
+Architecture 
+
+
+Project/Solution (in local machine) →[g] local repo (in local machine) →[h] remote repo (github, gitlab, bitbucket, aws code commit) 
+
+
+
+
+Git: 
+
+
+Modified - staging – commit 
+
+
+Command to work on local repo 
+1. git init → initalize local repo 
+2. git add . → stage the file that needs to be tracked 
+3. git commit -m “message” → update the local repo 
+
+
+
+
+
+
+4. git remote add origin1 https://github.com/balaji-githubstore/csharp-playwright-equiniti-oct-2025.git → registering the remote url with name origin 
+5. git push -u origin master
+
+
+
+
+
+
+—-----------------------------------------------
+
+
+BDD Framework - Behaviour Driven Development  
+Actual BDD → Understanding the requirement  
+Modified BDD - ATDD - Acceptance test-driven testing → Writing the acceptance testing 
+
+
+
+
+BDD Framework 
+1. Java or Javascript – cucumber 
+2. Python - Jbehave or pytest bdd 
+3. .Net C# – ReqNRoll 
+
+
+Architecture of Reqnroll 
+
+
+Feature (.feature) → Step definition (.cs) 
+
+
+
+
+
+
+Scenario: Title 
+Given [Prerequisite] 
+When [Actions/Operation] 
+Then [Assertion] 
+
+
+
+
+Steps to create a BDD framework in .NET
+1. Add extension for ReqnRoll (Extensions → Reqnroll) 
+2. Create ReqnRoll project 
+3. Add or update the dependencies 
+   1. Microsoft.Playwright (.dll) 
+4. Create Feature file 
+   1. Add Feature header 
+   2. Add feature description 
+      1. Unformatted description 
+      2. Formatted description 
+In order to [business goal] 
+As a [role] 
+I would like to [visible change in the application] 
+5. Scenario 
+   1. Add title 
+   2. Add the steps (minimum one given, when, then) 
+6. Create step definition 
+7. Step parameterization 
+   1. Reuse the code 
+   2. To reduce duplicates in the step definition 
+8. Scenario outline 
+   1. One scenario - multiple sets of test data 
+   2. Reduce duplicates in the feature file 
+9. Background 
+   1. If there are repeated given for all scenarios under a single feature file, then use background; otherwise, avoid it. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Important concepts - (Improve the readability/maintenance) 
+1. Step parameterization - code reuse 
+2. Scenario outline - one scenario - multiple sets of test data 
+3. Background - repeated given 
+4. Datatable - tabular data 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 GB - 1024 MB 
+1 MB - 1024 KB 
+1 KB - 1024 B 
+1 B - 8 bits 
+1 bit – > 0 or 1 
+
+
+
+
+
+
+Reference 
+1. System.IndexOutOfRangeException:
+
+
+
+
+ 
+  if (await page.Locator("xpath=//div[contains(text(),'Sorry, We are not able to connect your corporate account')]").IsVisibleAsync())
+  {
+
+          string errorMessage1 = await page.Locator("xpath=//div[contains(text(),'Sorry, We are not able to connect your corporate account')]").InnerTextAsync();
+
+          Console.WriteLine("Error Message: " + errorMessage1);
+
+  }
+ 
+
+
+
+
+ 
+Assignments:
+Task 1(Important)
+1.     Navigate onto https://www.salesforce.com/in/form/signup/freetrial-sales/
+2.     Enter first name as “John”
+3.     Enter last name as “wick”
+4.     Enter work email as “john@gmail.com”
+5.     Select Job title as “IT Manager”
+6.     Select Employees as “101-500 employees”
+7.     Select country as “United Kingdom”
+8.     Do not fill the phone number
+9.     Click on check box
+10.  Click on start my free trial
+11.  Get the error message displayed “Enter a valid phone number”
+ 
+Task 3 (Important)
+1.           Navigate onto https://www.medibuddy.in/
+2.           Close if any popup and Click on Login
+3.           Click on I have Corporate Account
+4.           Click on Learn More
+5.           Click on Skip
+6.           Click on Login using Username & Password
+7.           Enter username as john
+8.           Enter password as john123
+9.           Click on show password
+10.   Click log in
+11.    Get the error message shown and print it in terminal
+Task 4
+1.            Navigate to https://nasscom.in/
+2.           Click on Login and then click on register
+3.           Enter First name as admin
+4.           Enter Last name as pass
+5.           Enter email address as admin@gmail.com
+6.           Enter company name as Google
+7.           Select IT Consulting from dropdown
+8.           No need to automate CAPTCHA
+9.           Click on Register
+Multiple tabs
+Task 1 (Important) - Multiple tabs
+1.           Navigate onto https://www.citigroup.com/global/about-us/global-presence/india
+2.           Close if any pop up comes
+3.           Click on My Account
+4.           Click on Banking with citi
+5.           In new tab
+6.           Enter userid as john123
+7.           Click on signup
+8.           Get the error displayed for password
+Task 2
+1.           Navigate to https://secure1.inmotionhosting.com/index/login
+2.           Click on visit our support center
+3.           Click on “No Thanks” if any popup
+4.           Search for “diskspace”
+5.           Get the text “Search Results for: diskspace” and print it
+ 
+Task 3
+1.     https://eq-sol-ops-us-fd-main.azurefd.net/informational/contact-us/
+2.     Fill the form with some random data and clear it off 
+
+
+
+
+Frame 
+Task 3 (Important)
+1.       Navigate onto http://demo.openemr.io/b/openemr/
+2.       Update username as admin
+3.       Update password as pass
+4.       Select language as English (Indian)
+5.       Click on the login button
+6.       Click on Patient  Click New Search
+7.       Add the first name, last name
+8.       Update DOB as today's date
+driver.findElement(By.id("form_DOB")).sendKeys("2024-01-12");
+9.       Update the gender
+10.   . Click on the create new patient button above the form
+11.   . Click on confirm create new patient button.
+12.   . Print the text from alert box (if any error before handling alert add 5 sec wait)
+13.   . Handle alert
+14.   Close the Happy Birthday popup
+15.   Get the added patient name and print in the console.
+
+
+[a]C# compiler
+[b]with the help of CLI
+[c]C# compiler
+[d]with the help of CLI
+[e]C# compiler
+[f]with the help of CLI
+[g]git commit
+[h]git push
