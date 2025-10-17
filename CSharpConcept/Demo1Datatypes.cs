@@ -98,6 +98,8 @@ namespace Eq.Team.Test
 
             Console.WriteLine(name1[0]);
             Console.WriteLine(name1.ToUpper());
+
+            //will resume in 15 mins (17:45 IST)
         }
     }
 }

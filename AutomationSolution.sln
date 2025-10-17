@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaywrightAutomation", "Pla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECartApplication", "ECartApplication\ECartApplication.csproj", "{F3147736-F700-4C8A-A09B-2BC5B947C039}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumProject2", "SeleniumProject2\SeleniumProject2.csproj", "{F63B5E82-3B1D-4004-B95F-0B77650903D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F3147736-F700-4C8A-A09B-2BC5B947C039}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3147736-F700-4C8A-A09B-2BC5B947C039}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3147736-F700-4C8A-A09B-2BC5B947C039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F63B5E82-3B1D-4004-B95F-0B77650903D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F63B5E82-3B1D-4004-B95F-0B77650903D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F63B5E82-3B1D-4004-B95F-0B77650903D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F63B5E82-3B1D-4004-B95F-0B77650903D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

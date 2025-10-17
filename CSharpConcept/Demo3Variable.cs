@@ -14,7 +14,7 @@ namespace CSharpConcept
         public int aNS = 10;    //non-static variable or instance variable
         public int bNS = 20;
 
-        static void Main(string[] args)
+        static void Main33(string[] args)
         {
             Demo3Variable.aS = 98;
 

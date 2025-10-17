@@ -11,7 +11,7 @@ namespace SeleniumProject
         [Test]
         public void Test1()
         {
-            IWebDriver driver = new EdgeDriver();
+            IWebDriver driver = new ChromeDriver("");
 
             ////network idle state
             driver.Url = "https://www.nasscom.in/nasscom-membership";

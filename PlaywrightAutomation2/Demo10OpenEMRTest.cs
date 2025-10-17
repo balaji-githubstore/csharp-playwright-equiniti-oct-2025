@@ -18,6 +18,8 @@ namespace EQ.PlaywrightAutomation
 
             var page = await context.NewPageAsync();
 
+            //page.SetDefaultTimeout
+
             await page.GotoAsync("http://demo.openemr.io/b/openemr/", new() { WaitUntil = WaitUntilState.Load, Timeout = 0 });
 
             /*1.	Navigate onto http://demo.openemr.io/b/openemr/
@@ -46,8 +48,8 @@ namespace EQ.PlaywrightAutomation
             //gender 
 
 
-            //var frameConfirm = page.FrameLocator("xpath=//iframe[@id='modalframe']");
-            //await frameConfirm.Locator("//button[@id='confirmCreate']").ClickAsync();
+            var frameConfirm = page.FrameLocator("xpath=//iframe[@id='modalframe']");
+            await frameConfirm.Locator("//button[@id='confirmCreate']").ClickAsync();
 
             
             await Task.Delay(5000);

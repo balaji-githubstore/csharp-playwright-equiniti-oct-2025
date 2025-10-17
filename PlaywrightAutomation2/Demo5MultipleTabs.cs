@@ -20,7 +20,12 @@ namespace EQ.PlaywrightAutomation
             //page --> points to tab 1
             var page = await context.NewPageAsync();
 
-            await page.GotoAsync("https://www.db4free.net/", new() { WaitUntil = WaitUntilState.Load, Timeout = 0 });
+
+            //PageGotoOptions p = new PageGotoOptions();
+            //p.Timeout = 0;
+            //p.WaitUntil = WaitUntilState.Load;
+
+            await page.GotoAsync("https://www.db4free.net/", new PageGotoOptions() { WaitUntil = WaitUntilState.Load, Timeout = 0 });
 
             //start tracking for any new tab/window opens or not
             var newTab = page.WaitForPopupAsync();

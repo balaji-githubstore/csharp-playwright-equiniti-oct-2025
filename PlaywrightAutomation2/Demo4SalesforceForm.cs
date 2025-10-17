@@ -36,7 +36,7 @@ namespace EQ.PlaywrightAutomation
 
             await page.Locator("xpath=(//div[@class='checkbox-ui'])[2]").ClickAsync();
 
-           // await page.Locator("xpath=//div[@class='checkbox-ui']").Nth(1).ClickAsync();
+            // await page.Locator("xpath=//div[@class='checkbox-ui']").Nth(1).ClickAsync();
 
             //await page.Locator("xpath=//select[@name='CompanyEmployees']").SelectTextAsync(new LocatorSelectTextOptions() { })
             /*
@@ -54,6 +54,10 @@ namespace EQ.PlaywrightAutomation
                 11.	Get the error message displayed “Enter a valid phone number”
 
              */
+
+            await page.Locator("xpath=//input[@name='UserEmail']").PressAsync("JACK12");
+            await page.Locator("xpath=//input[@name='UserEmail']").PressSequentiallyAsync("JACK12");
+
             await Task.Delay(3000);
         }
 
@@ -71,11 +75,15 @@ namespace EQ.PlaywrightAutomation
             await page.Locator("xpath=//div[text()='Search or select company']").ClickAsync();
             await page.Locator("xpath=//div[normalize-space()='ROHDE TAX CLIENT 1']").ClickAsync();
 
+            //await page.FrameByUrl("")
+
             var actualText= await page.Locator("xpath=//p[contains(text(),'two business days')]").InnerTextAsync();
             Console.WriteLine(actualText);
 
             Assert.That(actualText, Does.Contain("Please submit the following information"));
             await Task.Delay(3000);
+
+
         }
     }
 }

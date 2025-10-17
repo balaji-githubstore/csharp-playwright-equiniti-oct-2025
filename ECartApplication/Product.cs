@@ -19,6 +19,23 @@ namespace ECartApplication
 
         }
 
+        public Product(int quanity,string name)
+        {
+            this.quanity = quanity;
+            this.name = name;
+        }
+
+        public Product(string name, int quanity)
+        {
+            this.quanity = quanity;
+            this.name = name;
+        }
+
+        public Product(double price)
+        {
+         
+
+        }
 
     }
 }
