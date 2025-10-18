@@ -1,0 +1,71 @@
+﻿Final Caption Project
+
+
+✅ Final Assessment Instructions – BDD Framework        1
+Project & Submission Details,        1
+Session GitHub Project For BDD        1
+Please check the README.md in the above repository        1
+APPLICATION - https://nasscom.in/        2
+Test Case 1: Login with Empty Fields        2
+Test Case 2: Login with Invalid Credentials        2
+Test Case 3: Membership Fee Calculation Without Selecting Financial Year (FY)        2
+Test Case 4: Membership Fee Calculation For FY 2024-25        3
+
+
+
+
+✅ Final Assessment Instructions – BDD Framework
+Project & Submission Details,
+Dear participants 
+Please complete the final automation assessment by following the instructions below. This will help you solidify your understanding of Selenium with Cucumber (BDD)
+For submission, add it to GitHub and add me as a collaborator - 
+* Push all changes to any of your repositories on GitHub
+* Add me (balajidinakaran1@gmail.com) as a collaborator so I can review the submissions and provide feedback.
+________________
+Session GitHub Project For BDD
+Please check the README.md of the session work designed for BDD in the git url
+
+
+APPLICATION - https://nasscom.in/
+
+
+Test Case 1: Login with Empty Fields
+Objective: Ensure the system does not allow login with an incorrect username/password.
+Steps:
+1. Navigate to the NASSCOM login page.
+2. Click on Login 
+3. Assert below the error messages are shown below         
+* Username field is required.
+* Password field is required.
+* Math question field is required.
+* Please enter username and password.
+Test Case 2: Login with Invalid Credentials
+Objective: Ensure login fails when required fields are empty.
+Steps:
+1. Navigate to the NASSCOM 
+2. Click on Login
+3. Enter an invalid username and/or password.
+4. Write logic to fill the answer for Math question 
+5. Click "Login".
+6. Assert - Unrecognized username or password. Forgot your password?
+Test Case 3: Membership Fee Calculation Without Selecting Financial Year (FY)
+Objective: Ensure the system displays an error when the user tries to calculate membership fee without selecting a financial year.
+Steps:
+1. Navigate to the NASSCOM 
+2. Click on Become a member
+3. Enter total revenue as 2
+4. Click on calculate fee
+5. Assert the alert message - Please select a financial year.
+
+
+Test Case 4: Membership Fee Calculation For FY 2024-25
+Objective: Ensure the system correctly calculates and displays the membership fee for a valid total revenue and selected financial year.
+Steps:
+1. Navigate to the NASSCOM 
+2. Click on Become a member
+3. Enter total revenue as 2
+4. Select FY as FY 2024-25
+5. Click on calculate fee
+6. Assert -
+   1. Header is shown - Membership Fee 
+   2. Assert the total charge - ₹ 17,700.00

@@ -13,6 +13,8 @@ Session Notes/C#/Playwright - https://github.com/balaji-githubstore/csharp-playw
 BDD Framework - https://github.com/balaji-githubstore/csharp-bdd-framework-equiniti-oct-2025.git
 
 
+BDD Framework - Git - rework 
+https://github.com/balaji-githubstore/csharp-playwirhgt-bdd-framework-git-equiniti-oct-2025.git
 
 
 
@@ -21,6 +23,8 @@ MCQ
 1. Pre-Test 
 2. Mid Test 
 3. Final Test 
+
+
 Caption Project 
 1. Final Project using BDD Framework 
 
@@ -140,7 +144,7 @@ To call the non-static method
 17. Constructor - Pre-requisite for the object
    1. Constructor name and classname should be same. 
    2. It is kind of method that gets called during the object creation. 
-   3. There will be always a default constructor. It helps to load all the non-static variables with default values in the current object 
+   3. There will always be a default constructor. It helps to load all the non-static variables with default values in the current object 
    4. We can override the default constructor by creating our own constructor 
       1. Without arguments 
       2. With arguments 
@@ -148,9 +152,35 @@ To call the non-static method
 
 
 18. Constructor Overloading 
-19. Method Overloading 
+The constructor to be called is resolved during compile time
+We can create multiple constructor, by change in 
+* Datatypes of arguments 
+* Sequence of arguments
+* Number of arguments 
+19. Method Overloading /Static polymorphism/ compile time polymorphism 
+The method to be called is resolved during compile time (.during the generation of .dll)
+   6. We can create multiple methods with the same name, by changing in 
+      1. Datatypes of arguments 
+      2. Sequence of arguments
+      3. Number of arguments 
 
 
+20. Inheritance - Reusability, maintenance 
+   1. When we want to reuse methods, properties, fields from another class, instead of re-creating, we can use inheritance to make use of those methods, properties, fields .
+   2. If the parent class is having constructor with arguments then during inheritance, use base keyword to call the constructor explicitly 
+
+
+21. Method overriding/run-time polymorphism/ dynamic polymorphism 
+The method to be called is resolved during runtime 
+1. You need override the method available in parent with same name and return type. In c#, parent class method use virtual or abstract and child class method should defined with override 
+22. Abstract class 
+23. Interface 
+24. Collections 
+   1. Non-generic type 
+      1. Always boxing and unboxing will happen so it’s not recommended 
+   2. Generic type 
+      1. List 
+      2. Dictionary 
 
 
 
@@ -208,7 +238,9 @@ https://docs.nunit.org/articles/nunit/writing-tests/assertions/assertion-models/
 
 15. Dynamic Table 
 16. Shadownroot elements (use only CSS selector) 
-17. Javascript 
+https://playwright.dev/dotnet/docs/locators#locate-in-shadow-dom
+
+
 
 
 
@@ -285,6 +317,13 @@ When [Actions/Operation]
 Then [Assertion] 
 
 
+Framework 
+1. BDD Framework - ReqNRoll ((Data Driven Framework) )
+2. Nunit (helpful for assertions) 
+3. Page Object Model - For effectively handling the web elements 
+4. Keyword Driven Framework - For managing - Playwright automation keywords 
+
+
 
 
 Steps to create a BDD framework in .NET
@@ -307,11 +346,36 @@ I would like to [visible change in the application]
 7. Step parameterization 
    1. Reuse the code 
    2. To reduce duplicates in the step definition 
-8. Scenario outline 
+8. Scenario outline (Data Driven Framework) 
    1. One scenario - multiple sets of test data 
    2. Reduce duplicates in the feature file 
 9. Background 
    1. If there are repeated given for all scenarios under a single feature file, then use background; otherwise, avoid it. 
+10. Datatable 
+   1. When we want to send bulk or tabular data to one step definition, 
+
+
+11. Scenario outline with a datatable 
+12. Tags 
+13. Hooks 
+   1. https://docs.reqnroll.net/latest/automation/hooks.html
+   2. [BeforeScenario] - runs before each scenario 
+   3. [AfterScenario] → runs after each scenario, even scenario fails 
+
+
+14.  Page Object Model - Design pattern 
+   1. Reuse
+   2. Maintenance 
+   3. Readability 
+        To implement the page object model 
+1. For each web page, we need to create a class - Page class 
+2. Operations/Actions happen through the methods - Page Methods 
+3. Collecting the object repository (locators) and keeping it at the class level 
+
+
+15. Dependency injection
+   1. https://docs.reqnroll.net/latest/automation/context-injection.html
+16. Tags 
 
 
 
@@ -345,14 +409,36 @@ Important concepts - (Improve the readability/maintenance)
 
 
 
+—---------------
 
 
 
 
 
 
-
-
+Selenium WebDriver 
+1. Create a nunit test project 
+2. Add and update dependencies 
+   1. Selenium WebDriver 
+   2. Selenium Support 
+3. Click, type, select 
+4. Synchronization 
+   1. Unconditional wait 
+Thread.Sleep(5000) → not recommended 
+   2. Conditional wait 
+      1. Implicit wait 
+         1. Default implicit wait - 0s 
+         2. Applicable for FindElement and FindElements 
+         3. Example: implicit wait - 30s 
+            1. If the element is not present, it will check for 30s and then throw an error 
+            2. If the element is present, then it will do the operation immediately 
+            3. Polling time - 0.5s 
+      2. Explicit wait 
+      3. Fluent wait 
+         1. Control polling time 
+         2. Ignore exceptions 
+5. Multiple tabs, alert, frame - switchTo()
+6. Actions 
 
 
 
@@ -493,6 +579,66 @@ driver.findElement(By.id("form_DOB")).sendKeys("2024-01-12");
 13.   . Handle alert
 14.   Close the Happy Birthday popup
 15.   Get the added patient name and print in the console.
+
+
+
+
+
+
+Final Task 
+Final Task
+Task 1 (Important)
+1.     https://www.malaysiaairlines.com/us/en/home.html
+Task 2 (Important) - shadowroot element
+1.                        Navigate onto https://www.royalcaribbean.com/account/signin
+2.                        Click Create an account
+4.                      First Name as Dennis 
+5.                      Last Name as Rich
+6.                      Select Month as April 
+7.                      Day as 4
+8.                      Year as 1990
+9.                      Country as India
+10.                  Any email address and password 
+11.                  Select as “What was your first car's make or model?”
+12.                  Type answer 
+13.                  Accept the terms and condition 
+14.                  Click done 
+
+
+
+
+
+
+: Failed to connect to github.com port 443 after 2097 ms: Couldn't connect to server
+
+
+
+
+
+
+BDD 
+Scenario: AddValidEmployeeTest
+        Given User have browser with Orange HRM application
+        When User enter username as "Admin"
+        And User enter password as "admin123"
+        And User click on login
+        And User click on PIM menu
+        And User click on Add Employee menu
+        And User fill the employee form
+                | firstname | middle_name | lastname |
+                | jack      | w           | wick     |
+        And User click on save employee
+        Then User should get the added profile name "jack wick"
+        And User should verify the firstname field contains "jack"
+
+
+
+
+
+
+C# 
+ 
+https://edabit.com/collection/BJaL5QmeaH95MSqc
 
 
 [a]C# compiler

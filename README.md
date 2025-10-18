@@ -1,4 +1,4 @@
-﻿# 📘 Equiniti Automation Training – June 2025
+﻿# 📘 Equiniti Automation Training – Oct 2025
 
 This repository group is part of the Equiniti Automation Training Program conducted in June 2025. It includes Java fundamentals, Selenium automation concepts, and two advanced frameworks — Hybrid and BDD — to enable step-by-step hands-on learning.
 
