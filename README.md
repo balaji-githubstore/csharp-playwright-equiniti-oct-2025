@@ -1,4 +1,4 @@
-﻿# 📘 Equiniti Automation Training – Oct 2025
+﻿# 📘 Equiniti Automation Training - Oct 2025
 
 This repository group is part of the Equiniti Automation Training Program conducted in June 2025. It includes Java fundamentals, Selenium automation concepts, and two advanced frameworks — Hybrid and BDD — to enable step-by-step hands-on learning.
 
@@ -40,6 +40,15 @@ Selenium WebDriver such as:
 
 ---
 
+## 🧪 Framework - Final for reference: C# BDD Framework  
+**Repository:** [C#-bdd-framework](https://github.com/balaji-githubstore/csharp-bdd-framework-equiniti-jun-2025.git)
+### Branches:
+
+| Branch | Description |
+|--------|-------------|
+| `b3-master-added-keywords-screenshot-video` | ✅ Contains updated Playwright keywords along with screenshot, video, and trace capabilities. Also includes enhanced hooks integration. This branch is useful when reporting tools are excluded, but debugging and execution tracking features are required. |
+
+---
 ## 👤 Author
 
 **Balaji Dinakaran**  
