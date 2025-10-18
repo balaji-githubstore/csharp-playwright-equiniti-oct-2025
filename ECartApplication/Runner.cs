@@ -23,11 +23,11 @@ namespace ECartApplication
 
             Product p2 = new Product(1.1);
 
-            Calculator c = new Calculator();
-            c.Add(4, (double)4);
+            //Calculator c = new Calculator();
+            //c.Add(4, (double)4);
 
 
-            Math.Max(1, 1);
+            //Math.Max(1, 1);
         }
     }
 }

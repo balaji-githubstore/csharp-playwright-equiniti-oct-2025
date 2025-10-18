@@ -33,6 +33,18 @@ namespace EQ.PlaywrightAutomation
 
             //Console.WriteLine(await pageEdge.TitleAsync());
 
+            var allLinkText= await page.Locator("xpath=//a").AllInnerTextsAsync();
+
+            foreach (string linkText in allLinkText)
+            {
+                Console.WriteLine(linkText);
+            }
+
+
+            var allLocator = await page.Locator("xpath=//a").AllAsync();
+
+            await allLocator[0].ClickAsync();
+
             await Task.Delay(3000);
 
         }
