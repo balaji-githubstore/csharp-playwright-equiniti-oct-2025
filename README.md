@@ -6,7 +6,7 @@ This repository group is part of the Equiniti Automation Training Program conduc
 
 ## 📂 Repositories Overview
 
-### 🔹 Java Concepts  
+### 🔹 C# Concepts  
 **Repository:** [C#-concept](https://github.com/balaji-githubstore/csharp-playwright-equiniti-oct-2025.git)  
 C# concepts including:
 - OOPs (Inheritance, Polymorphism, Encapsulation, Abstraction)
